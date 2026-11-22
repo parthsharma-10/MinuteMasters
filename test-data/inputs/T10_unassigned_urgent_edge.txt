@@ -1,0 +1,7 @@
+Manager: The client demo went reasonably well, but the feedback form highlights critical latency in query responses.
+Developer_1: The Redis cache was down during the stress test.
+Manager: Okay, we decided that caching must be made mandatory across all read endpoints.
+Developer_1: That is agreed.
+Manager: Furthermore, someone urgently needs to set up Prometheus alerting. This must be done immediately.
+Developer_2: And the database connection pool configuration needs to be reviewed as soon as possible.
+Manager: Yes, make sure both are addressed before next sprint planning.
