@@ -80,6 +80,8 @@ MinuteMasters-TranscriptToTasks/
 ├── README.md                           # Project guide & team overview
 ├── CHANGELOG.md                        # Dated history from M1 to M2
 ├── requirements.txt                    # Python dependencies
+├── run_app.bat                         # 1-click launcher for Streamlit Web App
+├── generate_pdfs.bat                   # 1-click batch script for Edge PDF generation
 ├── prompts/
 │   ├── v1/v1_baseline.md              # Milestone 1 Baseline prompt
 │   ├── v2/v2_fewshot_json.md          # Milestone 2 Intermediate JSON prompt
@@ -88,7 +90,7 @@ MinuteMasters-TranscriptToTasks/
 │       ├── P1_extraction_prompt.md     # Production Extraction Prompt Sheet
 │       └── P2_verification_prompt.md   # Production Verification Prompt Sheet
 ├── code/
-│   ├── app.py                          # Interactive Streamlit Web App
+│   ├── app.py                          # Interactive Streamlit Web App (Live API + Heuristic)
 │   ├── transcript_pipeline.py          # Pure Python pipeline orchestrator
 │   └── TranscriptToTasks_Prototype.ipynb # Jupyter notebook with executed outputs
 ├── test-data/
@@ -121,10 +123,15 @@ pip install -r requirements.txt
 ```
 
 ### 3. Launch the Streamlit Web App
+Run via PowerShell:
 ```bash
-streamlit run code/app.py
+python -m streamlit run code/app.py
 ```
-Open your browser at `http://localhost:8501`. You can test preloaded sample cases or paste your own meeting transcript!
+*Or double-click `run_app.bat` in File Explorer.*
+
+Open your browser at `http://localhost:8501`. You can test preloaded sample cases or paste ANY custom meeting transcript! The prototype supports both:
+- **Live LLM API Mode:** Enter your free Google Gemini API key in the sidebar.
+- **Offline Heuristic Mode:** Runs completely local with zero setup or API keys required.
 
 ---
 

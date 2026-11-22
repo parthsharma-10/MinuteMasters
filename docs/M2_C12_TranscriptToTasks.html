@@ -267,10 +267,10 @@ We employ a <strong>Two-Stage Decoupled Pipeline (2 Prompts)</strong>:
 <em>Why 2 steps?</em> In Milestone 1, single-step prompts suffered from confirmation bias: models hallucinated owners on unassigned tasks (38% error rate) and defended their fabrications. Decoupling extraction from verification reduced owner hallucination to 0%.</p>
 
 <p><strong>4. Which tool/model and why?</strong><br>
-We use <strong>Gemini 2.5 Flash in Google AI Studio</strong>, orchestrating with a Python 3.11 backend and Streamlit web UI. Gemini 2.5 Flash offers a 1M+ token context window (perfect for long transcripts), near-zero inference cost (~$0.0003 per transcript), rapid sub-second latency, and strict JSON compliance. We also verified cross-compatibility against Claude 3.5 Sonnet and GPT-4o.</p>
+We use <strong>Gemini 2.5 Flash in Google AI Studio</strong>, orchestrating with a Python 3.11 backend and Streamlit web UI, accompanied by an offline Smart Heuristic Grounding Engine. Gemini 2.5 Flash offers a massive context window (ideal for multi-hour transcripts), near-zero inference cost (~$0.0003 per meeting), rapid sub-second latency, and strict JSON compliance. In our prototype, we engineered a hybrid architecture: evaluators can input a Google Gemini API key for live LLM inference or test any custom transcript offline without an API key using the smart dynamic parser.</p>
 
 <p><strong>5. What changed since Milestone 1?</strong><br>
-Transitioned from a single zero-shot text prompt (v1) to a two-stage decoupled pipeline (P1 + P2); enforced strict JSON schema with mandatory <code>evidence_quote</code> citations; introduced deterministic <code>"not stated"</code> fallback constraints (incorporating feedback from senior mentor Ojas Vats); lowered sampling temperatures to 0.2 and 0.1; built an interactive Streamlit prototype and a 12-transcript evaluation benchmark.</p>
+Transitioned from a single zero-shot text prompt (v1) to a two-stage decoupled pipeline (P1 + P2); enforced strict JSON schema with mandatory <code>evidence_quote</code> citations; introduced deterministic <code>"not stated"</code> fallback constraints (incorporating feedback from senior mentor Ojas Vats); lowered sampling temperatures to 0.2 and 0.1; built an interactive Streamlit prototype supporting live API execution and offline parsing on any custom transcript, complete with 1-click JSON and CSV export.</p>
 
 <h3>(b) System & Workflow Diagrams</h3>
 <div class="callout">
@@ -381,9 +381,9 @@ Audit each entry. Return verified JSON and markdown_table.</pre>
     </tr>
     <tr>
       <td><strong>Module 2: Structured Extractor (P1)</strong></td>
-      <td>Extracts initial decisions and action items with verbatim quotes into JSON schema.</td>
+      <td>Executes Prompt P1 via live Gemini 2.5 Flash API or smart local parser to extract decisions and tasks with verbatim quotes.</td>
       <td><strong>Working</strong></td>
-      <td>Validated on Gemini 2.5 Flash, Claude 3.5, and GPT-4o.</td>
+      <td>Supports both live cloud LLM API calls and offline dynamic parsing on any custom transcript.</td>
     </tr>
     <tr>
       <td><strong>Module 3: Verification Engine (P2)</strong></td>
@@ -393,9 +393,9 @@ Audit each entry. Return verified JSON and markdown_table.</pre>
     </tr>
     <tr>
       <td><strong>Module 4: Export & Markdown Formatter</strong></td>
-      <td>Renders clean Markdown checklist and RFC 8259 JSON for Slack/Jira.</td>
+      <td>Renders clean Markdown checklist and RFC 8259 JSON, with 1-click JSON and CSV export downloads.</td>
       <td><strong>Working</strong></td>
-      <td>1-click copy-to-clipboard and CSV download.</td>
+      <td>Integrated into UI; supports 1-click JSON and CSV file downloads.</td>
     </tr>
     <tr>
       <td><strong>Module 5: Multilingual Code-Switching Normalizer</strong></td>
@@ -576,6 +576,8 @@ Audit each entry. Return verified JSON and markdown_table.</pre>
 ├── README.md                           # Overview, team roster, quickstart, and links
 ├── CHANGELOG.md                        # Dated progress from Milestone 1 to Milestone 2
 ├── requirements.txt                    # Dependencies (streamlit, pandas, pydantic)
+├── run_app.bat                         # 1-click launcher for Streamlit Web Application
+├── generate_pdfs.bat                   # 1-click batch script for Edge headless PDF generation
 ├── prompts/                            # Iteration logs (v1, v2, v3) and final prompt sheets (P1, P2)
 ├── code/                               # Streamlit UI (app.py), orchestrator, and Jupyter notebook
 ├── test-data/                          # 12 test inputs (T01-T12) and verified output JSONs
@@ -584,7 +586,7 @@ Audit each entry. Return verified JSON and markdown_table.</pre>
 <p><strong>What Changed Since Milestone 1 (3–5 Lines):</strong><br>
 1. Refactored from a single zero-shot text prompt to an architected two-stage pipeline (<code>P1_EXTRACTION</code> + <code>P2_VERIFICATION</code>) with verbatim citations and strict <code>"not stated"</code> fallbacks.<br>
 2. Built a comprehensive 12-test benchmark with ground truths, capturing authentic edge cases and failure modes.<br>
-3. Developed an interactive Streamlit web application prototype and executable Google Colab notebook.<br>
+3. Developed an interactive Streamlit web application prototype supporting hybrid execution (live Gemini REST API + smart dynamic heuristic parsing on any custom transcript) with 1-click JSON and CSV exports.<br>
 4. Completed the strategic Business Model Canvas and formal Milestone 2 report.</p>
 
 <div class="page-break"></div>

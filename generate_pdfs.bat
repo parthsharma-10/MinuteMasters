@@ -26,4 +26,4 @@ if exist "%~dp0docs\MinuteMasters_BMC.pdf" (
 
 echo.
 echo Complete!
-pause
+if "%1" neq "--no-pause" pause

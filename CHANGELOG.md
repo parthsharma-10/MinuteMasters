@@ -11,7 +11,9 @@ All notable changes, engineering iterations, and milestone achievements are docu
   - Built comprehensive ground-truth answer keys and verified model outputs in `test-data/outputs/`.
   - Added honest edge-case failure analyses for Code-Switching (T11) and Non-Meeting Text Rejection (T12).
 - **Interactive Prototype Application:**
-  - Built interactive Streamlit application (`code/app.py`) featuring model selection, test case loading, pipeline visualization, and CSV/JSON export.
+  - Built interactive Streamlit application (`code/app.py`) featuring model selection, test case loading, pipeline visualization, and instant CSV/JSON download buttons.
+  - Added Hybrid Engine: Live Google Gemini REST API support with optional sidebar key + built-in smart semantic heuristic parser for offline evaluation of any custom transcript.
+  - Added `run_app.bat` 1-click launcher and `generate_pdfs.bat` PDF compiler.
   - Developed pure Python orchestrator (`code/transcript_pipeline.py`).
   - Created executable Jupyter/Colab notebook (`code/TranscriptToTasks_Prototype.ipynb`) with outputs pre-saved.
 - **Architectural Documentation & Diagrams:**

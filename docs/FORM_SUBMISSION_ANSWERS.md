@@ -56,7 +56,7 @@ S24CSEU2693
 ```text
 Gemini 2.5 Flash in Google AI Studio
 ```
-*(Also evaluated and benchmarked on Claude 3.5 Sonnet and OpenAI GPT-4o)*
+*(Also evaluated on Gemini 1.5 Flash, Claude 3.5 Sonnet, and GPT-4o, with a built-in offline smart heuristic engine for zero-dependency evaluation of custom transcripts)*
 
 ### Q10. Number of prompts (1–50)
 ```text
@@ -141,7 +141,7 @@ S24CSEU2693 – Chakshu – Full-Stack UI & Prototype Developer
 
 ### Q23. Anything the evaluator should know (Optional)
 ```text
-The prototype is fully runnable via Streamlit (code/app.py) or Google Colab (code/TranscriptToTasks_Prototype.ipynb). It includes 12 pre-loaded test cases representing normal, edge, and invalid inputs. We decoupled the pipeline into two prompts to eliminate owner hallucination, and as shown in our test table, we honestly document edge-case failure modes (Test 11 Hinglish and Test 12 Invalid) along with architectural solutions planned for Milestone 3. All prompts and datasets are available in the public repository without any API keys.
+The prototype is fully runnable via Streamlit (code/app.py) using 'python -m streamlit run code/app.py' or by double-clicking 'run_app.bat'. It features a hybrid execution engine: evaluators can test custom transcripts using live Gemini API inference (via sidebar API key) or run the built-in offline smart heuristic engine without any API keys. It includes 12 preloaded benchmark test cases (Normal, Edge, and Invalid) with honest failure analysis (Test 11 Hinglish & Test 12 Invalid) and instant 1-click JSON and CSV export downloads.
 ```
 
 ### Q24. Confirmation

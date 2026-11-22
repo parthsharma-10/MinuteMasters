@@ -44,11 +44,11 @@
 ### Part 3: Working Demo on Real Input (0:48 – 1:38 | Duration: ~50 seconds)
 - **Visual on Screen (0:48 – 1:00):**  
   Open the live **Streamlit Web Application Prototype** (`code/app.py`).  
-  Mouse hovers over the sidebar showing model selection (Gemini 2.5 Flash, Temp=0.2).  
+  Mouse hovers over the sidebar showing model selection (Gemini 2.5 Flash, Temp=0.2) and the optional API key input.  
   From the dropdown, select **T01: Club Orientation Planning**.  
   Show the transcript loaded in the text area.
 - **Voiceover (Parth):**  
-  > "Now, let’s see the full solution running live in our Streamlit web prototype. We select our Club Orientation transcript with three speakers: Asha, Ravi, and Meera, planning a venue booking, a poster, and an email list."
+  > "Now, let’s see the full solution running live in our Streamlit web prototype. It supports live Gemini API inference or smart offline parsing. We select our Club Orientation transcript with three speakers: Asha, Ravi, and Meera, planning a venue booking, a poster, and an email list."
 
 - **Visual on Screen (1:00 – 1:22):**  
   Click the blue button: **🚀 Run Transcript-to-Tasks Workflow**.  
@@ -66,9 +66,9 @@
 - **Visual on Screen (1:22 – 1:38):**  
   Switch the dropdown to **T08: Sports Meet Changed Decision (Edge Case)**.  
   Click run. Highlight the table showing that the initial Saturday proposal was discarded and Neha's cancelled task was reassigned to Sameer on Sunday morning.  
-  Click the **Export to JSON / Markdown** button to show instant interoperability.
+  Click the **Download Verified JSON** and **Download Actions CSV** buttons to show instant export.
 - **Voiceover (Parth):**  
-  > "Even on complex edge cases where decisions change mid-meeting—like cancelling Saturday for Sunday—our verification auditor prunes the superseded proposal and captures the new owner accurately."
+  > "Even on complex edge cases where decisions change mid-meeting—like cancelling Saturday for Sunday—our verification auditor prunes the superseded proposal and captures the new owner accurately. Plus, you can export to JSON or CSV in one click."
 
 ---
 

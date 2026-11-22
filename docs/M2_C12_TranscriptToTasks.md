@@ -63,15 +63,15 @@ We employ a **Two-Stage Decoupled Pipeline (2 Prompts)**:
 
 ### 4. Which Tool / Model and Why?
 - **Tool:** Google AI Studio, Python 3.11 orchestration engine, and Streamlit Web UI.
-- **Model:** **Gemini 2.5 Flash** (benchmarked against Claude 3.5 Sonnet and GPT-4o).
-- **Justification:** Gemini 2.5 Flash offers a massive context window (ideal for multi-hour transcripts), superior instruction-following, rapid sub-second inference speeds, and near-zero cost (~$0.0003 per meeting transcript). Running parallel evaluations across Gemini, Claude, and GPT-4o verified that our prompt schema is robust across model families.
+- **Model:** **Gemini 2.5 Flash** (with fallback support for Gemini 1.5 Flash, Claude 3.5 Sonnet, and GPT-4o, plus an offline Smart Heuristic Grounding Engine for zero-dependency local evaluation).
+- **Justification:** Gemini 2.5 Flash offers a massive context window (ideal for multi-hour transcripts), superior instruction-following, rapid sub-second inference speeds, and near-zero cost (~$0.0003 per meeting transcript). In our prototype, we engineered a hybrid architecture: users can plug in any Google Gemini API key for live LLM inference, or run the smart built-in heuristic parser offline to evaluate any custom transcript without API keys or setup friction.
 
 ### 5. What Changed Since Milestone 1?
 1. **From Single Prompt to Two-Stage Pipeline:** M1 used a single zero-shot prompt (`v1`) that returned unpredictable formatting. M2 implements a decoupled two-prompt architecture (`P1_EXTRACTION` + `P2_VERIFICATION`).
 2. **JSON Schema with Verbatim Evidence Quotes:** Enforced mandatory `evidence_quote` attributes for every extracted item.
 3. **Deterministic Fallbacks:** Replaced owner/deadline guessing with mandatory `"not stated"` tags, directly incorporating feedback from senior mentor Ojas Vats.
 4. **Sampling Temperature Optimization:** Reduced temperature from default (1.0) to 0.2 (P1) and 0.1 (P2), eliminating schema invalidity.
-5. **Interactive Prototype & Benchmark:** Built a functional Streamlit web application and an evaluation harness covering 12 test transcripts (including edge cases and invalid inputs).
+5. **Interactive Prototype with Hybrid Inference:** Built a functional Streamlit web application supporting both live Gemini REST API calls and offline dynamic parsing for any custom transcript, complete with 1-click JSON and CSV export.
 
 ---
 
@@ -510,9 +510,9 @@ MinuteMasters has built an end-to-end meeting intelligence pipeline consisting o
 | Module Name | What It Does | Status | Notes |
 |---|---|---|---|
 | **Module 1: Transcript Ingestion & Pre-processor** | Ingests spoken text transcripts, sanitizes formatting disfluencies, normalizes speaker tags, and validates input length. | **Working** | Fully functional in `code/transcript_pipeline.py` and Streamlit app. |
-| **Module 2: Structured Decision & Task Extractor (P1)** | Executes Prompt P1 to extract initial decisions and candidate action items with verbatim evidence quotes and fallback rules. | **Working** | Validated across Gemini 2.5 Flash, Claude 3.5 Sonnet, and GPT-4o. |
+| **Module 2: Structured Decision & Task Extractor (P1)** | Executes Prompt P1 via live Gemini 2.5 Flash API or smart local semantic parser to extract decisions and tasks with verbatim quotes. | **Working** | Supports both live cloud LLM API calls and offline dynamic parsing on any custom transcript. |
 | **Module 3: Transcript Grounding & Verification Engine (P2)** | Cross-checks candidate JSON against source transcript, confirms speaker consent, flags hallucinations, and prunes invalid tasks. | **Working** | Eliminates hallucinated commitments; tested across all 12 benchmark cases. |
-| **Module 4: Export & Markdown Table Formatter** | Formats verified data into human-auditable markdown action checklists and RFC 8259 JSON for downstream project management tools. | **Working** | Integrated into UI and Python pipeline; supports 1-click clipboard copy. |
+| **Module 4: Export & Markdown Table Formatter** | Formats verified data into human-auditable markdown action checklists and RFC 8259 JSON, with 1-click JSON and CSV export downloads. | **Working** | Integrated into UI and Python pipeline; supports CSV download and direct clipboard copy. |
 | **Module 5: Multilingual Code-Switching Normalizer** | Translates and normalizes Hindi/Hinglish temporal colloquialisms (e.g., 'kal shaam') into standardized UTC/calendar dates. | **Partly working** | Extracts tasks and owners accurately, but temporal calendar mapping fails in Hinglish edge cases (Test 11). Planned for M3. |
 | **Module 6: Jira / Slack Automated Webhook Sync** | Dispatches verified action items directly as Jira tickets and Slack reminders. | **Not started** | Scope targeted for Milestone 3 (Prototype refinement & enterprise delivery). |
 
@@ -717,6 +717,8 @@ MinuteMasters-TranscriptToTasks/
 ├── README.md                           # Project overview, installation, team roster & prototype links
 ├── CHANGELOG.md                        # Dated progress and milestone changelog
 ├── requirements.txt                    # Python runtime dependencies (streamlit, pandas, etc.)
+├── run_app.bat                         # 1-click launcher for Streamlit Web Application
+├── generate_pdfs.bat                   # 1-click batch script for Edge headless PDF generation
 ├── prompts/
 │   ├── v1/
 │   │   └── v1_baseline.md              # Milestone 1 baseline prompt
@@ -728,7 +730,7 @@ MinuteMasters-TranscriptToTasks/
 │       ├── P1_extraction_prompt.md     # Production Candidate Extractor prompt sheet
 │       └── P2_verification_prompt.md   # Production Verification Engine prompt sheet
 ├── code/
-│   ├── app.py                          # Interactive Streamlit Web Application
+│   ├── app.py                          # Interactive Streamlit Web Application (Live API + Heuristic)
 │   ├── transcript_pipeline.py          # Pure Python workflow orchestrator
 │   └── TranscriptToTasks_Prototype.ipynb # Executable Jupyter/Colab notebook with saved outputs
 ├── test-data/
@@ -750,7 +752,7 @@ MinuteMasters-TranscriptToTasks/
 ## 2. What Changed Since Milestone 1 (3–5 Lines)
 1. Transitioned from a single zero-shot text prompt to an architected, two-stage decoupled pipeline (`P1_EXTRACTION` and `P2_VERIFICATION`) with verbatim quote anchoring and explicit `"not stated"` fallbacks.
 2. Built and benchmarked a 12-test dataset across normal, edge (changed decisions, vague assignees, code-switching), and invalid cases, tracking empirical pass/fail rates.
-3. Developed an interactive Streamlit web application prototype allowing live transcript processing, temperature tuning, and instant CSV/Markdown exports.
+3. Developed an interactive Streamlit web application prototype supporting hybrid execution (live Gemini REST API + smart dynamic heuristic parsing on any custom transcript) with 1-click JSON and CSV exports.
 4. Formalized the business model into a 9-block Business Model Canvas targeting student organizations and SME software teams.
 
 ---
