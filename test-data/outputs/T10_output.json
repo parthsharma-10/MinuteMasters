@@ -1,0 +1,26 @@
+{
+  "test_id": "T10",
+  "type": "Edge",
+  "status": "PASS",
+  "notes": "Handles passive urgent assignments without named assignees, tagging owner as 'not stated'.",
+  "decisions": [
+    {
+      "decision_text": "Caching made mandatory across all read endpoints.",
+      "evidence_quote": "Manager: Okay, we decided that caching must be made mandatory across all read endpoints. Developer_1: That is agreed."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Set up Prometheus alerting",
+      "owner": "not stated",
+      "deadline": "Immediately / Before next sprint planning",
+      "evidence_quote": "Manager: Furthermore, someone urgently needs to set up Prometheus alerting. This must be done immediately."
+    },
+    {
+      "task": "Review database connection pool configuration",
+      "owner": "not stated",
+      "deadline": "ASAP / Before next sprint planning",
+      "evidence_quote": "Developer_2: And the database connection pool configuration needs to be reviewed as soon as possible."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Prof. Verma: Let us review the manuscript draft for IEEE Access.
+Parth: We finalized the methodology section and bench-marked against baseline Llama-3.
+Prof. Verma: Good. Kabir, can you re-plot Figure 4 with KaTeX fonts and standard error bars?
+Kabir: Yes sir, I will update Figure 4 and push the SVG files to GitHub by Friday night.
+Parth: I will revise the abstract and related work based on Prof. Verma's comments by Saturday noon.
+Prof. Verma: Once those are done, I will sign off on the final camera-ready PDF.

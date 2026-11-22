@@ -1,0 +1,25 @@
+{
+  "test_id": "T04",
+  "type": "Normal",
+  "status": "PASS",
+  "decisions": [
+    {
+      "decision_text": "Red Bull offered co-title beverage partnership for Pulse 2026.",
+      "evidence_quote": "Ananya: We have decided to offer Red Bull the co-title beverage partnership."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Send signed sponsorship MOU to Red Bull",
+      "owner": "Vikram",
+      "deadline": "Tomorrow evening",
+      "evidence_quote": "Vikram: I will send them the signed sponsorship MOU by tomorrow evening."
+    },
+    {
+      "task": "Draft customized deliverables deck for GeeksforGeeks with prior footfall numbers",
+      "owner": "Simran",
+      "deadline": "Thursday 10 AM",
+      "evidence_quote": "Simran: I will draft the customized deliverables deck for GeeksforGeeks by Thursday 10 AM."
+    }
+  ]
+}

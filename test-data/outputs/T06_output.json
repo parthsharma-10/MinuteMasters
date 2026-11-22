@@ -1,0 +1,31 @@
+{
+  "test_id": "T06",
+  "type": "Normal",
+  "status": "PASS",
+  "decisions": [
+    {
+      "decision_text": "Methodology section finalized and bench-marked against Llama-3.",
+      "evidence_quote": "Parth: We finalized the methodology section and bench-marked against baseline Llama-3. Prof. Verma: Good."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Re-plot Figure 4 with KaTeX fonts and standard error bars and push SVG to GitHub",
+      "owner": "Kabir",
+      "deadline": "Friday night",
+      "evidence_quote": "Kabir: Yes sir, I will update Figure 4 and push the SVG files to GitHub by Friday night."
+    },
+    {
+      "task": "Revise abstract and related work sections",
+      "owner": "Parth",
+      "deadline": "Saturday noon",
+      "evidence_quote": "Parth: I will revise the abstract and related work based on Prof. Verma's comments by Saturday noon."
+    },
+    {
+      "task": "Sign off on camera-ready PDF",
+      "owner": "Prof. Verma",
+      "deadline": "After revisions complete",
+      "evidence_quote": "Prof. Verma: Once those are done, I will sign off on the final camera-ready PDF."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "test_id": "T08",
+  "type": "Edge",
+  "status": "PASS",
+  "notes": "Handles superseded initial proposal (Saturday night scrapped) and revoked ownership (Neha replaced by Sameer).",
+  "decisions": [
+    {
+      "decision_text": "Tournament finals scheduled for Sunday afternoon (Saturday cancelled due to floodlight maintenance).",
+      "evidence_quote": "Kartik: Okay, so the tournament finals will definitely be on Sunday afternoon instead. Sameer: Agreed, Sunday afternoon is locked in."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Disburse referee payments and handle cash disbursement",
+      "owner": "Sameer",
+      "deadline": "Sunday morning",
+      "evidence_quote": "Sameer: I will take over the referee payments and cash disbursement on Sunday morning."
+    },
+    {
+      "task": "Notify team captains about Sunday schedule shift",
+      "owner": "Kartik",
+      "deadline": "Tonight 9 PM",
+      "evidence_quote": "Kartik: I will notify all team captains about the Sunday schedule shift by tonight 9 PM."
+    }
+  ]
+}

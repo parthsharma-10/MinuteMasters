@@ -1,0 +1,6 @@
+Lecture 12: Second Law of Thermodynamics and Carnot Cycle.
+The efficiency of a reversible heat engine operating between two thermal reservoirs at temperatures Th and Tc depends solely on the temperatures.
+Formula: eta = 1 - (Tc / Th).
+Key concept: Entropy is a state function representing microscopic disorder.
+Note for midterm: Students must practice calculating the change in entropy delta_S for ideal gas isothermal expansion before Friday's quiz.
+Assigned reading: Chapter 4, sections 4.1 to 4.5.

@@ -1,0 +1,32 @@
+{
+  "test_id": "T07",
+  "type": "Edge",
+  "status": "PASS",
+  "notes": "Handles overlapping emotional dialogue and non-committal vague promises.",
+  "decisions": [
+    {
+      "decision_text": "Submit a written penalty petition to the Chief Warden backed by 100 student signatures.",
+      "evidence_quote": "Deepak: We will submit a written penalty petition to the Chief Warden. Pooja: Agreed, written petition with 100 student signatures. That is decided."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Draft the written penalty petition letter",
+      "owner": "Deepak",
+      "deadline": "Tonight",
+      "evidence_quote": "Deepak: I can draft the letter by tonight."
+    },
+    {
+      "task": "Circulate petition sheets across hostel floors",
+      "owner": "not stated",
+      "deadline": "ASAP",
+      "evidence_quote": "Deepak: Someone should circulate the petition sheets across floors ASAP."
+    },
+    {
+      "task": "Submit petition letter to Chief Warden",
+      "owner": "not stated",
+      "deadline": "Before Friday lunch",
+      "evidence_quote": "Deepak: Let's aim to submit the letter before Friday lunch."
+    }
+  ]
+}

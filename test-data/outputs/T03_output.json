@@ -1,0 +1,31 @@
+{
+  "test_id": "T03",
+  "type": "Normal",
+  "status": "PASS",
+  "decisions": [
+    {
+      "decision_text": "Legacy v1 auth endpoints will be deprecated by this Friday.",
+      "evidence_quote": "Dev: Also, we decided to deprecate the legacy v1 auth endpoints by this Friday. Aditya: Agreed on deprecating v1 auth."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Deploy hotfix for stripe webhook signature timeout",
+      "owner": "Ritika",
+      "deadline": "3 PM today",
+      "evidence_quote": "Ritika: I will deploy a hotfix by 3 PM today."
+    },
+    {
+      "task": "Review Ritika's hotfix PR",
+      "owner": "Aditya",
+      "deadline": "4 PM today",
+      "evidence_quote": "Aditya: I will review Ritika's PR once it is up, latest by 4 PM."
+    },
+    {
+      "task": "Notify mobile app team regarding v1 auth deprecation",
+      "owner": "Dev",
+      "deadline": "6 PM today",
+      "evidence_quote": "Dev: I will notify the mobile app team about the v1 deprecation by 6 PM today."
+    }
+  ]
+}

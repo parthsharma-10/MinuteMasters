@@ -1,0 +1,31 @@
+{
+  "test_id": "T01",
+  "type": "Normal",
+  "status": "PASS",
+  "decisions": [
+    {
+      "decision_text": "Club orientation will be held on 20th October.",
+      "evidence_quote": "Asha: We should hold the club orientation on 20 Oct. Ravi: Agreed."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Book the seminar hall",
+      "owner": "Ravi",
+      "deadline": "Friday",
+      "evidence_quote": "Ravi: Agreed. I will book the seminar hall by Friday."
+    },
+    {
+      "task": "Design and share the orientation poster",
+      "owner": "Meera",
+      "deadline": "Monday",
+      "evidence_quote": "Meera: I can design the poster, will share it Monday."
+    },
+    {
+      "task": "Email the freshers list",
+      "owner": "Sana",
+      "deadline": "After the poster is ready (contingent)",
+      "evidence_quote": "Asha: Okay, then Sana please email the freshers list after the poster is ready."
+    }
+  ]
+}

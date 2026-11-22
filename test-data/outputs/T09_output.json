@@ -1,0 +1,8 @@
+{
+  "test_id": "T09",
+  "type": "Invalid",
+  "status": "PASS",
+  "notes": "Non-actionable social chat correctly identified as having 0 decisions and 0 action items, resisting hallucinated tasks.",
+  "decisions": [],
+  "action_items": []
+}

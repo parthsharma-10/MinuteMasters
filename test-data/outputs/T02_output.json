@@ -1,0 +1,25 @@
+{
+  "test_id": "T02",
+  "type": "Normal",
+  "status": "PASS",
+  "decisions": [
+    {
+      "decision_text": "Sanctioned budget of INR 85,000 allocated: 40k catering, 25k prizes, 20k merchandise.",
+      "evidence_quote": "Tanvi: We agreed in the steering council to allocate 40,000 for food catering, 25,000 for cash prizes, and 20,000 for merchandise. Kunal: Yes, that allocation is officially approved."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Obtain formal quotation from campus catering vendor",
+      "owner": "Tanvi",
+      "deadline": "Wednesday noon",
+      "evidence_quote": "Tanvi: I will get the formal quotation from the campus vendor by Wednesday noon."
+    },
+    {
+      "task": "Submit requisition form to dean's office",
+      "owner": "Raman",
+      "deadline": "Thursday 4 PM",
+      "evidence_quote": "Raman: Understood. I will submit the requisition by Thursday 4 PM sharp."
+    }
+  ]
+}

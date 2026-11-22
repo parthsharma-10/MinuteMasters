@@ -1,0 +1,7 @@
+Aayush: Yaar, techfest website ka status kya hai?
+Harsh: Front-end ready hai boss, but registration form me validation bugs hain.
+Aayush: Theek hai, listen. Harsh tu poster and registration banner bana de by kal shaam 5 baje.
+Harsh: Haan main bana dunga kal 5 PM tak, pakka.
+Aayush: Aur venue permission ka letter main khud Dean sir ko submit kar dunga Wednesday morning.
+Harsh: Ek aur cheez, DJ night sound system vendor ko call karna hai jaldi.
+Aayush: Wo Kabir dekh lega jab usko time milega.

@@ -1,0 +1,106 @@
+{
+  "project": "Transcript-to-Tasks",
+  "team": "MinuteMasters",
+  "eval_version": "v3.0",
+  "total_tests": 12,
+  "passed": 10,
+  "failed": 2,
+  "tests": [
+    {
+      "test_no": 1,
+      "name": "Club Orientation Planning",
+      "type": "Normal",
+      "expected": "1 decision (Orientation on 20 Oct), 3 action items (Ravi/hall/Friday, Meera/poster/Monday, Sana/freshers/contingent)",
+      "actual": "Extracted 1 decision and 3 action items with verbatim quotes. All owners and deadlines verified.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 2,
+      "name": "Hackathon Finance Sync",
+      "type": "Normal",
+      "expected": "1 decision (85k budget split), 2 action items (Tanvi/vendor quote/Wed noon, Raman/requisition/Thu 4 PM)",
+      "actual": "1 decision and 2 action items extracted accurately. Unresolved sponsorship discussion omitted.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 3,
+      "name": "Sprint Standup Webhook Bug",
+      "type": "Normal",
+      "expected": "1 decision (deprecate v1 auth by Friday), 3 action items (Ritika/hotfix/3 PM, Aditya/PR review/4 PM, Dev/notify app team/6 PM)",
+      "actual": "1 decision and 3 action items extracted. All temporal anchors resolved correctly.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 4,
+      "name": "Sponsorship Outreach Sync",
+      "type": "Normal",
+      "expected": "1 decision (Red Bull co-title), 2 action items (Vikram/MOU/tomorrow evening, Simran/deck/Thu 10 AM)",
+      "actual": "1 decision and 2 action items extracted with exact quotes.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 5,
+      "name": "Robotics Procurement Committee",
+      "type": "Normal",
+      "expected": "1 decision (buy 4 RPLIDAR from Robu), 2 action items (Rohit/PO/Tue afternoon, Sneha/ledger/Wednesday)",
+      "actual": "1 decision and 2 action items extracted accurately.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 6,
+      "name": "Research Manuscript Review",
+      "type": "Normal",
+      "expected": "1 decision (methodology finalized), 3 action items (Kabir/Figure 4/Fri night, Parth/abstract/Sat noon, Prof. Verma/signoff/contingent)",
+      "actual": "1 decision and 3 action items extracted. Contingent deadline handled properly.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 7,
+      "name": "Mess Committee Dispute",
+      "type": "Edge",
+      "expected": "1 decision (written petition), 3 action items with missing owners tagged as 'not stated'",
+      "actual": "1 decision and 3 action items extracted; unassigned floor circulation tagged 'not stated'.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 8,
+      "name": "Sports Meet Rescheduling",
+      "type": "Edge",
+      "expected": "1 decision (Sunday finals; discard Saturday), 2 action items (Sameer took over Neha's task)",
+      "actual": "Correctly discarded superseded Saturday proposal and reassigned owner to Sameer.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 9,
+      "name": "Casual Coffee Banter",
+      "type": "Invalid",
+      "expected": "0 decisions, 0 action items (detect non-meeting social chatter)",
+      "actual": "Empty arrays returned: 0 decisions, 0 action items. Hallucination avoided.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 10,
+      "name": "Passive Urgent Requests",
+      "type": "Edge",
+      "expected": "1 decision (mandatory caching), 2 action items with owner 'not stated' and urgent deadlines",
+      "actual": "Identified tasks but tagged owner as 'not stated'. Urgent deadline retained.",
+      "result": "Pass"
+    },
+    {
+      "test_no": 11,
+      "name": "Hinglish Project Sync",
+      "type": "Edge",
+      "expected": "Tasks and owners extracted with English normalized deadline 'Tomorrow 5 PM'",
+      "actual": "Tasks and owners found, but Hindi temporal phrase 'kal shaam 5 baje' remained un-normalized.",
+      "result": "Fail"
+    },
+    {
+      "test_no": 12,
+      "name": "Engineering Lecture Notes",
+      "type": "Invalid",
+      "expected": "Reject input: Not a meeting transcript; no decisions/action items",
+      "actual": "Model hallucinated lecture homework as meeting task assigned to 'Students'.",
+      "result": "Fail"
+    }
+  ]
+}

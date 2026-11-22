@@ -1,0 +1,5 @@
+Dr. Nair: In this robotics lab committee meeting, we need to order the LIDAR sensors and Jetson Orin modules.
+Rohit: We compared prices between Robu.in and Mouser. We decided to purchase four RPLIDAR A1 units from Robu due to faster domestic shipping.
+Dr. Nair: Approved. Rohit, generate the purchase order by Tuesday afternoon.
+Sneha: I will prepare the inventory ledger entry and secure the department stamp by Wednesday.
+Dr. Nair: Please ensure the equipment is cataloged as soon as delivered.

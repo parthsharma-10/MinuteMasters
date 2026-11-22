@@ -1,0 +1,27 @@
+{
+  "test_id": "T11",
+  "type": "Edge",
+  "status": "FAIL",
+  "notes": "Code-switching / Hinglish failure: P1 captured the task and owner, but failed to normalize colloquial Hindi temporal anchor 'kal shaam 5 baje' into English standard deadline 'Tomorrow 5 PM', logging deadline as verbatim untranslated string without calendar resolution.",
+  "decisions": [],
+  "action_items": [
+    {
+      "task": "Bana de poster and registration banner",
+      "owner": "Harsh",
+      "deadline": "kal shaam 5 baje",
+      "evidence_quote": "Harsh tu poster and registration banner bana de by kal shaam 5 baje."
+    },
+    {
+      "task": "Submit venue permission letter to Dean",
+      "owner": "Aayush",
+      "deadline": "Wednesday morning",
+      "evidence_quote": "Aur venue permission ka letter main khud Dean sir ko submit kar dunga Wednesday morning."
+    },
+    {
+      "task": "Call DJ night sound system vendor",
+      "owner": "Kabir",
+      "deadline": "not stated",
+      "evidence_quote": "Wo Kabir dekh lega jab usko time milega."
+    }
+  ]
+}

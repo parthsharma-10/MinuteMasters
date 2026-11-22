@@ -1,0 +1,20 @@
+{
+  "test_id": "T12",
+  "type": "Invalid",
+  "status": "FAIL",
+  "notes": "Domain hallucination failure: Given raw engineering lecture notes, the prompt failed to reject the non-meeting document and force-extracted homework exercises as organizational action items.",
+  "decisions": [
+    {
+      "decision_text": "Carnot engine efficiency depends solely on reservoir temperatures.",
+      "evidence_quote": "Formula: eta = 1 - (Tc / Th)."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Practice calculating change in entropy for ideal gas isothermal expansion",
+      "owner": "Students",
+      "deadline": "Friday's quiz",
+      "evidence_quote": "Note for midterm: Students must practice calculating the change in entropy delta_S for ideal gas isothermal expansion before Friday's quiz."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "test_id": "T05",
+  "type": "Normal",
+  "status": "PASS",
+  "decisions": [
+    {
+      "decision_text": "Purchase four RPLIDAR A1 units from Robu.in.",
+      "evidence_quote": "Rohit: We decided to purchase four RPLIDAR A1 units from Robu due to faster domestic shipping. Dr. Nair: Approved."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Generate purchase order for LIDAR units",
+      "owner": "Rohit",
+      "deadline": "Tuesday afternoon",
+      "evidence_quote": "Dr. Nair: Approved. Rohit, generate the purchase order by Tuesday afternoon."
+    },
+    {
+      "task": "Prepare inventory ledger entry and get department stamp",
+      "owner": "Sneha",
+      "deadline": "Wednesday",
+      "evidence_quote": "Sneha: I will prepare the inventory ledger entry and secure the department stamp by Wednesday."
+    }
+  ]
+}
