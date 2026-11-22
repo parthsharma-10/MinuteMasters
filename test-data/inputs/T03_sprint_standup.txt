@@ -1,0 +1,5 @@
+Dev: Sprint 14 standup. We have two blocking bugs in the payment webhook.
+Ritika: I looked into the stripe webhook error. It is a signature verification timeout. I will deploy a hotfix by 3 PM today.
+Dev: Excellent. Also, we decided to deprecate the legacy v1 auth endpoints by this Friday.
+Aditya: Agreed on deprecating v1 auth. I will review Ritika's PR once it is up, latest by 4 PM.
+Dev: I will notify the mobile app team about the v1 deprecation by 6 PM today.
