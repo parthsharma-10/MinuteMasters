@@ -50,20 +50,6 @@ Raw Transcript ─────────────────────�
 1. **Stage 1 (Prompt P1 — Extraction):** Ingests raw conversation and extracts candidate decisions and action items with verbatim quotes. Applies fallback: missing owners/deadlines &rarr; `"not stated"`.
 2. **Stage 2 (Prompt P2 — Adversarial Verification):** Cross-checks candidate JSON against the source transcript. Discards fabricated items, verifies speaker consent, checks deadline realism, and generates the final auditable action checklist.
 
----
-
-## 📊 Milestone 2 Official Audit Counts
-
-| Metric | Required / Allowed | MinuteMasters Actual | Exact Match in PDF |
-|---|---|---|---|
-| **Number of Final Prompts (Q10)** | 1 – 50 | **2** (`P1_EXTRACTION` & `P2_VERIFICATION`) | Section 2(c) |
-| **Number of Test Inputs (Q17)** | Minimum 10 | **12** (6 Normal, 4 Edge, 2 Invalid) | Section 4.1 |
-| **Number of Prompt Versions (Q18)**| Minimum 3 | **3** (v1 Baseline, v2 JSON, v3 Production) | Section 3.3 |
-| **Reel Duration (Q14)** | 90 – 150 seconds | **118 seconds** | `docs/REEL_SCRIPT.md` |
-| **Prototype Working Modules (Q20)**| All Claimed Working | **4 Working Modules** | Section 3.2 |
-
----
-
 ## 📁 Repository Directory Layout
 
 ```text
