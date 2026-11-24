@@ -35,15 +35,6 @@ According to **Jabra's 2026 Global Workplace Report**:
 
 ---
 
-## 🔗 Key Submission Links
-- **Prototype Link (Q11):** [MinuteMasters Streamlit Prototype](https://minutemasters.streamlit.app) *(or open `code/TranscriptToTasks_Prototype.ipynb` in Google Colab)*
-- **Repository Link (Q12):** [MinuteMasters GitHub Repository](https://github.com/ParthSharma-BU/MinuteMasters-TranscriptToTasks)
-- **Video Reel Link (Q13):** [YouTube Unlisted Demo](https://youtu.be/MinuteMasters_M2_Demo) *(Exact length: **118 seconds**)*
-- **Milestone 2 PDF:** [`docs/M2_C12_TranscriptToTasks.pdf`](docs/M2_C12_TranscriptToTasks.pdf)
-- **Supporting Document (BMC):** [`docs/MinuteMasters_BMC.pdf`](docs/MinuteMasters_BMC.pdf)
-
----
-
 ## 🏗️ Architecture & Two-Stage Pipeline
 
 ```
@@ -94,17 +85,10 @@ MinuteMasters-TranscriptToTasks/
 │   ├── transcript_pipeline.py          # Pure Python pipeline orchestrator
 │   └── TranscriptToTasks_Prototype.ipynb # Jupyter notebook with executed outputs
 ├── test-data/
-│   ├── test_dataset.json               # 12-test evaluation matrix
-│   ├── inputs/                         # 12 synthetic transcripts (T01 - T12)
-│   └── outputs/                        # 12 verified outputs (T01 - T12)
-└── docs/
-    ├── M2_C12_TranscriptToTasks.pdf    # Master Milestone 2 PDF
-    ├── M2_C12_TranscriptToTasks.html   # Print-ready HTML version
-    ├── MinuteMasters_BMC.pdf           # Supporting Business Model Canvas PDF
-    ├── MinuteMasters_BMC.html          # Print-ready BMC HTML version
-    ├── REEL_SCRIPT.md                  # 118-second video storyboard
-    ├── FORM_SUBMISSION_ANSWERS.md      # Copy-pasteable Q1-Q24 Form Guide
-    └── diagrams/                       # Mermaid diagrams (Workflow, Architecture, etc.)
+    ├── test_dataset.json               # 12-test evaluation matrix
+    ├── inputs/                         # 12 synthetic transcripts (T01 - T12)
+    └── outputs/                        # 12 verified outputs (T01 - T12)
+
 ```
 
 ---
